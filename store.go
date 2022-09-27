@@ -29,7 +29,7 @@ type storeItem struct {
 	expiration time.Time
 }
 
-const numShards uint64 = 256
+const numShards uint64 = 256 * 8
 
 type updateFn func(prev, cur interface{}) bool
 type shardedMap struct {
